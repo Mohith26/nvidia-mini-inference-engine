@@ -1,0 +1,26 @@
+{
+  "note": "per-node wall time (ms) accumulated over one full batch-64 pass of the 10k test set; CPU single-thread, Apple Silicon",
+  "naive": {"images": 9984, "total_secs": 0.136472, "layers": [
+    {"name": "matmul_0", "ms": 115.766},
+    {"name": "bias_add_0", "ms": 0.154},
+    {"name": "relu_0", "ms": 0.087},
+    {"name": "matmul_1", "ms": 17.149},
+    {"name": "bias_add_1", "ms": 0.074},
+    {"name": "relu_1", "ms": 0.044},
+    {"name": "matmul_2", "ms": 1.977},
+    {"name": "bias_add_2", "ms": 0.018},
+    {"name": "softmax", "ms": 0.163}
+  ]},
+  "fused": {"images": 9984, "total_secs": 0.136541, "layers": [
+    {"name": "fused_dense_0", "ms": 116.061},
+    {"name": "fused_dense_1", "ms": 17.377},
+    {"name": "fused_dense_2", "ms": 1.939},
+    {"name": "softmax", "ms": 0.149}
+  ]},
+  "int8": {"images": 9984, "total_secs": 0.042311, "layers": [
+    {"name": "quant_dense_0", "ms": 24.577},
+    {"name": "quant_dense_1", "ms": 10.974},
+    {"name": "quant_dense_2", "ms": 4.744},
+    {"name": "softmax", "ms": 0.156}
+  ]}
+}

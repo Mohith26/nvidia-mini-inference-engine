@@ -1,0 +1,11 @@
+{
+  "note": "CPU single-thread, Apple Silicon (arm64), clang -O2; full graph incl. softmax; best of 5 full passes over the 10k MNIST test set (partial final batch dropped)",
+  "runs": [
+    {"engine": "naive", "batch": 1, "images": 10000, "best_of_5_secs": 0.140926, "images_per_sec": 70959.4, "ms_per_image": 0.014093},
+    {"engine": "naive", "batch": 64, "images": 9984, "best_of_5_secs": 0.136160, "images_per_sec": 73325.3, "ms_per_image": 0.013638},
+    {"engine": "fused", "batch": 1, "images": 10000, "best_of_5_secs": 0.140282, "images_per_sec": 71285.1, "ms_per_image": 0.014028},
+    {"engine": "fused", "batch": 64, "images": 9984, "best_of_5_secs": 0.136089, "images_per_sec": 73363.9, "ms_per_image": 0.013631},
+    {"engine": "int8", "batch": 1, "images": 10000, "best_of_5_secs": 0.040956, "images_per_sec": 244164.2, "ms_per_image": 0.004096},
+    {"engine": "int8", "batch": 64, "images": 9984, "best_of_5_secs": 0.039405, "images_per_sec": 253369.7, "ms_per_image": 0.003947}
+  ]
+}

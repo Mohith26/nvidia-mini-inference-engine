@@ -1,0 +1,10 @@
+{
+  "note": "CPU single-thread, Apple Silicon (arm64); real MNIST 10k test set unless data/meta.json says SYNTHETIC",
+  "test_examples": 10000,
+  "fusion": {"ops_before": 9, "ops_after": 4, "fused_dense": 3},
+  "fp32_naive_vs_oracle": {"pred_match_pct": 100.0000, "logit_max_abs_diff": 0.000000e+00},
+  "fp32_fused_vs_oracle": {"pred_match_pct": 100.0000, "logit_max_abs_diff": 1.525879e-05},
+  "fused_vs_naive_logit_max_abs_diff": 1.525879e-05,
+  "accuracy": {"oracle": 0.9809, "fp32_naive": 0.9809, "fp32_fused": 0.9809, "int8": 0.9810, "int8_minus_fp32": 0.0001},
+  "int8_calibration_images": 1000
+}

@@ -1,0 +1,6 @@
+{
+  "note": "counts from actual runs: `./build/run_tests data` and `.venv/bin/pytest tests -q`",
+  "cpp": {"passed": 25, "failed": 0, "skipped": 0, "command": "make test (./build/run_tests data)"},
+  "pytest": {"passed": 12, "failed": 0, "command": ".venv/bin/pytest tests -q --color=no"},
+  "total_passed": 37
+}
